@@ -5,31 +5,36 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/login";
 import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
-import { createBrowserRouter, Navigate, Outlet, RouterProvider } from "react-router-dom";
-
+import {
+  createBrowserRouter,
+  Navigate,
+  Outlet,
+  RouterProvider,
+} from "react-router-dom";
 
 function App() {
-
-  const currentUser = false 
+  const currentUser = true;
   const Layout = () => {
     return (
       <div>
         <Navbar />
         <div style={{ display: "flex" }}>
           <LeftBar />
-          <Outlet />
+          <div style={{ flex: 7 }}>
+            <Outlet />
+          </div>
           <RightBar />
         </div>
       </div>
     );
   };
 
-  const ProtectedRoute = ({children})=>{
-    if(!currentUser){
-      return <Navigate to ="/login"/>
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
     }
-    return children
-  }
+    return children;
+  };
   const router = createBrowserRouter([
     {
       path: "/",
@@ -40,7 +45,7 @@ function App() {
       ),
       children: [
         {
-          path: "/home",
+          path: "/",
           element: <Home />,
         },
         {
