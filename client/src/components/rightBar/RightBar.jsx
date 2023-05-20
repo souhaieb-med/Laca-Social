@@ -80,12 +80,31 @@ const RightBar = () => {
           <div className="user">
             <div className="userInfo">
               <img
-                src="https://images.pexels.com/photos/3772621/pexels-photo-3772621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt=""
               />
-              <div className="online">
-                <span>Seif Naffa </span>
-              </div>
+              <div className="online" />
+              <span>Samir Chtalia</span>
+            </div>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/7413915/pexels-photo-7413915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+              />
+              <div className="online" />
+              <span>Nabil Chafcha</span>
+            </div>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img
+                src="https://images.pexels.com/photos/5997313/pexels-photo-5997313.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+              />
+              <div className="online" />
+              <span>Sboui</span>
             </div>
           </div>
         </div>
