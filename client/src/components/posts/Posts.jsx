@@ -1,3 +1,4 @@
+import Post from "../post/Post";
 import "./posts.scss";
 const Posts = () => {
   const posts = [
@@ -20,7 +21,9 @@ const Posts = () => {
     },
   ];
   return <div className="Posts">
-    
+    {posts.map(post=>(
+    <Post post={post} key={post.id}/>
+    ))}
   </div>;
 };
 export default Posts;
