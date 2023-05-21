@@ -9,6 +9,10 @@
   background-color: white;
   color: black;
 
+   @include mobile{
+      display: none;
+    }
+    
   &::-webkit-scrollbar {
     display: none;
   }
