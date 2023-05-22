@@ -10,14 +10,15 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/authContext";
-
+import logo from "../../../public/logo.jpg"
 const Navbar = () => {
   const { currentUser } = useContext(AuthContext);
   return (
     <div className="Navbar">
       <div className="left">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span>Lacasocial</span>
+          {/* <span>Lacasocial</span> */}
+          <img src={logo} alt=""/>
         </Link>
         <Link to="/" style={{ textDecoration: "none", color: "black" }}>
           <HomeOutlinedIcon />

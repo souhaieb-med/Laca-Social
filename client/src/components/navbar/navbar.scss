@@ -1,3 +1,5 @@
+@import "../../style.scss";
+
 .Navbar {
   display: flex;
   align-items: center;
@@ -14,6 +16,13 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    img{
+      width: 75px;
+          height: 75px;
+          border-radius: 5%;
+          object-fit: cover;
+      
+    }
     span {
       font-weight: bold;
       font-size: 20px;
