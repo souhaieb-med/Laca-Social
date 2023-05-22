@@ -31,16 +31,16 @@ const Profile = () => {
             <a href="http://facebook.com">
               <FacebookTwoToneIcon fontSize="large" />
             </a>
-            <a href="http://facebook.com">
+            <a href="https://instagram.com">
               <InstagramIcon fontSize="large" />
             </a>
-            <a href="http://facebook.com">
+            <a href="https://twitter.com">
               <TwitterIcon fontSize="large" />
             </a>
-            <a href="http://facebook.com">
+            <a href="http ://linkedin.com">
               <LinkedInIcon fontSize="large" />
             </a>
-            <a href="http://facebook.com">
+            <a href="https://www.pinterest.ca">
               <PinterestIcon fontSize="large" />
             </a>
           </div>
@@ -53,7 +53,7 @@ const Profile = () => {
               </div>
               <div className="item">
                 <LanguageIcon />
-                <span>lama.dev</span>
+                <span>laca.social</span>
               </div>
             </div>
             <button>follow</button>
