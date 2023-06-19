@@ -10,7 +10,8 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/authContext";
-import logo from "../../../public/logo.jpg"
+import logo from "../../assets/logo.jpg"
+
 const Navbar = () => {
   const { currentUser } = useContext(AuthContext);
   return (
