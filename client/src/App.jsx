@@ -1,32 +1,40 @@
-import LeftBar from "./components/leftBar/LeftBar";
-import Navbar from "./components/navbar/Navbar";
-import RightBar from "./components/rightBar/RightBar";
-import Home from "./pages/home/Home";
-import Login from "./pages/login/login";
-import Profile from "./pages/profile/Profile";
+import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import {
   createBrowserRouter,
-  Navigate,
-  Outlet,
   RouterProvider,
+  Outlet,
+  Navigate,
 } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
+import LeftBar from "./components/leftBar/LeftBar";
+import RightBar from "./components/rightBar/RightBar";
+import Home from "./pages/home/Home";
+import Profile from "./pages/profile/Profile";
 import "./style.scss";
+import { useContext } from "react";
+import { AuthContext } from "./context/authContext";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
-  const currentUser = true;
+  const { currentUser } = useContext(AuthContext);
+
+  const queryClient = new QueryClient();
+
   const Layout = () => {
     return (
-      <div >
-        <Navbar />
-        <div style={{ display: "flex" }}>
-          <LeftBar />
-          <div style={{ flex: 7 }}>
-            <Outlet />
+      <QueryClientProvider client={queryClient}>
+        <div >
+          <Navbar />
+          <div style={{ display: "flex" }}>
+            <LeftBar />
+            <div style={{ flex: 6 }}>
+              <Outlet />
+            </div>
+            <RightBar />
           </div>
-          <RightBar />
         </div>
-      </div>
+      </QueryClientProvider>
     );
   };
 
@@ -34,8 +42,10 @@ function App() {
     if (!currentUser) {
       return <Navigate to="/login" />;
     }
+
     return children;
   };
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -64,10 +74,11 @@ function App() {
       element: <Register />,
     },
   ]);
+
   return (
-    <>
+    <div>
       <RouterProvider router={router} />
-    </>
+    </div>
   );
 }
 
